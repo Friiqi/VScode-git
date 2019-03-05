@@ -1,0 +1,104 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #000;
+  color: #fff;
+  overflow: hidden;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  background:url('https://i.ibb.co/1sQXJ4z/page-bg.png') no-repeat center center/cover;
+  height: 100vh;
+  /* vertical centering */
+  align-items: center;
+  /* horizontal centering: justify-content: center;*/
+  
+  text-align: center;
+}
+
+.animated {
+  font-family: 'Charm', cursive;
+  margin: 0;
+  padding: 0;
+  font-size: 6rem;
+  background: url('https://i.ibb.co/89Cf3dm/text-bg.png') no-repeat;
+  /*text to foreground, image as background to be "animated later     */
+  -webkit-background-clip: text;
+  /*TEXT COLOR /TEXT FILL- PROPERTY as transparent so you can see the background image through text  */
+  color: transparent;
+  animation: moveBg 90s linear infinite;
+  -webkit-animation:  moveBg 90s linear infinite;
+
+
+}
+.bigtext {
+  font-size: 50px;
+}
+/*text background animation */
+@keyframes moveBg {
+  0% {
+    background-position: 0% 30%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* CSS-only spinners */
+
+/* spinner 1 */
+.spinner-1:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  height: 60px;
+  width: 60px;
+  margin-top: -30px;
+  margin-left: -30px;
+  border-radius: 50%;
+  border: 4px solid lightgray;
+  border-top-color: coral;
+  animation: spinner 0.7s linear infinite;
+}
+/* spinner 2 */
+.spinner-2:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  height: 60px;
+  width: 60px;
+  margin-top: -30px;
+  margin-left: -30px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: coral;
+  border-bottom-color: coral;
+  animation: spinner 0.7s ease infinite;
+}
+/* spinner 3 */
+.spinner-3:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  height: 60px;
+  width: 60px;
+  margin-top: -30px;
+  margin-left: -30px;
+  border-radius: 50%;
+
+  border-top: 2px solid  coral;
+  border-right:2px solid transparent;
+  animation: spinner 0.7s linear infinite;
+}
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}

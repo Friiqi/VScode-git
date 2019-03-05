@@ -4,9 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Testijejajej</title>
+  <title>Css animation & spinners</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
+  <div class="container main">
+  <h1 class="animated">Text to be animated!</h1>
+ <!--  <p><img src="https://i.ibb.co/8D6XK4m/logo.png" alt="Traversy Media"></p> -->
+  <!-- <div class="spinner-3"></div> -->
+  <p class="bigtext">this text mimics the result of a load event</p>
+</div>
+
+
+<script>
+document.querySelector(".main p").style.display = "none";
+/* choose spinner 1 2 3 for load */ 
+document.querySelector(".main").classList.add("spinner-1");
+/* mimic loading event */
+setTimeout(() =>
+ {
+   /* choose spinner 1 2 3 for load */ 
+document.querySelector(".main").classList.remove("spinner-1");
+  document.querySelector(".main p").style.display = "block";
+
+
+ }, 4000);
+ /* load lasts 4000ms */
+</script>
 </body>
 </html>
